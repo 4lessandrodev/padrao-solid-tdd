@@ -144,6 +144,7 @@ Criar a tag de testes no package.json
 ```json
   "scripts": {
     "test": "jest",
+    "test:live": "jest --watch",
     "test:staged":"jest"
   },
 ```
