@@ -97,13 +97,22 @@ jest.config.js
 
 ```javascript
 module.exports = {
-  collectCoverageFrom: ['<rootDir>/src/**/*.test.ts'],
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.ts',
+    '!<rootDir>/src/main/**',
+    '!<rootDir>/src/**/*-protocols.ts',
+    '!**/protocols/**',
+    '!**/tests/**',
+    '!**/test/**'
+  ],
   coverageDirectory: 'coverage',
+  coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
   coverageProvider: 'v8',
   roots: [
     '<rootDir>/src'
   ],
   testEnvironment: 'node',
+  testPathIgnorePatterns: ['\\\\node_modules\\\\'],
   transform: {
     '.+\\.ts$': 'ts-jest'
   }
@@ -138,3 +147,16 @@ Criar a tag de testes no package.json
     "test:staged":"jest"
   },
 ```
+
+- [9]
+
+Verificar se alguma biblioteca possui atualização
+
+<https://www.npmjs.com/package/npm-check>
+
+`npm install -g npm-check`
+
+Comandos:
+`npm-check -u` verifica atualizações de forma interativa
+`npm-check -s -u` verifica atualizações de forma interativa e remove dependências não utilizadas
+`npm-check -g` verifica atualizações em dependências globais
