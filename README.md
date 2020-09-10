@@ -102,3 +102,22 @@ module.exports = {
   }
 }
 ```
+
+
+- [8] 
+Crie um arquivo de configuração do typescript 
+`npx tsc --init`
+
+```javascript 
+{
+  "compilerOptions": {
+    "target": "ES2019",                        
+    "module": "commonjs",                    
+    "allowJs": true,                       
+    "outDir": "./dist",                      
+    "strict": true,                          
+    "esModuleInterop": true,                 
+    "forceConsistentCasingInFileNames": true 
+  }
+}
+```
