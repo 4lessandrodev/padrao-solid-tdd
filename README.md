@@ -68,7 +68,8 @@ Apos intalar criar na raiz do projeto o arquivo de configuração
 ```javascript
 {
     "*.ts": [
-     "eslint --cache --fix",
+     "eslint 'src/**' --fix",
+     "npm run test:staged",
      "git add"
     ]
 }
@@ -121,3 +122,11 @@ Crie um arquivo de configuração do typescript
   }
 }
 ```
+
+Criar a tag de testes no package.json
+```json
+  "scripts": {
+    "test": "jest",
+    "test:staged":"jest"
+  },
+  ```
