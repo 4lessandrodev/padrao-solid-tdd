@@ -181,6 +181,7 @@ Verificar se alguma biblioteca possui atualização
 `npm install -g npm-check`
 
 Comandos:
+
 `npm-check -u` verifica atualizações de forma interativa
 
 `npm-check -s -u` verifica atualizações de forma interativa e remove dependências não utilizadas
