@@ -48,7 +48,7 @@ Inserir a pasta node_modules e dist para serem ignorados
 Instalar o hysky para usar hooks e validar os códigos antes de realizar um commit
 
 <https://www.npmjs.com/package/husky>
-`npm install husky`
+`npm install husky -D`
 
 Criar arquivo de configuração para o husky
 nome do arquivo .huskyrc.json
