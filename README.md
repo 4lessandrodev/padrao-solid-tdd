@@ -26,7 +26,9 @@ Para utilizar em projeto typescript utilizar o Eslint
 
 Configurar o eslint-whit-standard
 criar um arquivo de configuração na raiz do projeto
-nome do arquivo: .eslintrc.json
+nome do arquivo: 
+
+`.eslintrc.json`
 
 ```json
 {
@@ -51,7 +53,9 @@ nome do arquivo: .eslintrc.json
 - [4]
 
 Criar o eslint ignore
-.eslintignore
+
+`.eslintignore`
+
 Inserir a pasta node_modules e dist para serem ignorados
 
 - [5]
@@ -59,10 +63,13 @@ Inserir a pasta node_modules e dist para serem ignorados
 Instalar o hysky para usar hooks e validar os códigos antes de realizar um commit
 
 <https://www.npmjs.com/package/husky>
+
 `npm install husky -D`
 
 Criar arquivo de configuração para o husky
-nome do arquivo .huskyrc.json
+nome do arquivo 
+
+`.huskyrc.json `
 
 ```json
 {
@@ -100,19 +107,22 @@ Instalar o jest para realizar os testes
 Inicializar o jest no projeto se tiver o jest instalado de forma global
 
 `npm install jest --global`
+
 `jest --init`
 
 Ajustar o arquivo de configuração do jest
 
-jest.config.js
+`jest.config.js`
 
 ```javascript
 module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.ts',
     '!<rootDir>/src/main/**',
-    '!<rootDir>/src/**/*-protocols.ts',
-    '!**/protocols/**',
+    '!<rootDir>/src/**/*spec.ts',
+    '!<rootDir>/src/**/*test.ts',
+    '!<rootDir>/src/**/*test.js',
+    '!<rootDir>/src/**/*spec.js',
     '!**/tests/**',
     '!**/test/**'
   ],
@@ -127,12 +137,13 @@ module.exports = {
   transform: {
     '.+\\.ts$': 'ts-jest'
   }
-}
+};
 ```
 
 - [8]
 
 Crie um arquivo de configuração do typescript
+
 `npx tsc --init`
 
 ```json
@@ -154,10 +165,11 @@ Criar a tag de testes no package.json
 
 ```json
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:live": "jest --watch",
-    "test:staged":"jest"
-  },
+    "test:staged": "jest --passWithNoTests",
+    "dev:server": "ts-node-dev --respawn --transpile-only src/app.ts"
+  }
 ```
 
 - [9]
@@ -181,4 +193,4 @@ Instalar ts node dev para realizar a compilação em tempo real
 
 Configurar o package.json para executar o arquivo do servidor typescript
 
-` "dev:server": "ts-node-dev --respawn --transpile-only src/app.ts" `
+`"dev:server": "ts-node-dev --respawn --transpile-only src/app.ts"`
