@@ -182,7 +182,9 @@ Verificar se alguma biblioteca possui atualização
 
 Comandos:
 `npm-check -u` verifica atualizações de forma interativa
+
 `npm-check -s -u` verifica atualizações de forma interativa e remove dependências não utilizadas
+
 `npm-check -g` verifica atualizações em dependências globais
 
 - [10]
