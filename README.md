@@ -7,7 +7,7 @@
 Dependências úteis
 
 Gerenciar o padrão de mensagem de commit (fix), (feat), (test) ...
-`npm install -D git-commit-msg-linter`
+`npm install -D git-commit-msg-linter -D`
 
 Projeto em typescript e tipagem
 `npm install -D typescript @types/node`
@@ -66,7 +66,7 @@ nome do arquivo .huskyrc.json
 husky trabalha em conjunto com outra biblioteca lint-staged, o que permite validar apenas os arquivos que estão na stage
 <https://www.npmjs.com/package/lint-staged>
 
-`npm install lint-staged`
+`npm install lint-staged -D`
 
 Apos intalar criar na raiz do projeto o arquivo de configuração
 .lintstagedrc.json
