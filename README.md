@@ -161,3 +161,13 @@ Comandos:
 `npm-check -u` verifica atualizações de forma interativa
 `npm-check -s -u` verifica atualizações de forma interativa e remove dependências não utilizadas
 `npm-check -g` verifica atualizações em dependências globais
+
+- [10]
+
+Instalar ts node dev para realizar a compilação em tempo real 
+
+`npm install ts-node-dev --save-dev`
+
+Configurar o package.json para executar o arquivo do servidor typescript
+
+` "dev:server": "ts-node-dev --respawn --transpile-only src/app.ts" `
