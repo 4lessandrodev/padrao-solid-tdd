@@ -169,7 +169,8 @@ Criar a tag de testes no package.json
     "test:verbose": "jest --passWithNoTests --runInBand",
     "test:live": "jest --passWithNoTests --watch",
     "test:staged": "jest --passWithNoTests --findRelatedTests",
-    "test:ci":"jest --passWithNoTests --silent --noStackTrace --runInBand --coverage"
+    "test:ci":"jest --passWithNoTests --silent --noStackTrace --runInBand --coverage",
+    "dev:server": "ts-node-dev --respawn --transpile-only src/app.ts"
   },
 ```
 
