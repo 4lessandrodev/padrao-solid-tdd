@@ -164,12 +164,13 @@ Crie um arquivo de configuração do typescript
 Criar a tag de testes no package.json
 
 ```json
-  "scripts": {
-    "test": "jest --passWithNoTests",
-    "test:live": "jest --watch",
-    "test:staged": "jest --passWithNoTests",
-    "dev:server": "ts-node-dev --respawn --transpile-only src/app.ts"
-  }
+   "scripts": {
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:verbose": "jest --passWithNoTests --runInBand",
+    "test:live": "jest --passWithNoTests --watch",
+    "test:staged": "jest --passWithNoTests --findRelatedTests",
+    "test:ci":"jest --passWithNoTests --silent --noStackTrace --runInBand --coverage"
+  },
 ```
 
 - [9]
