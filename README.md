@@ -92,7 +92,7 @@ Apos intalar criar na raiz do projeto o arquivo de configuração
 ```json
 {
     "*.ts": [
-     "eslint 'src/**' --fix",
+     "eslint 'src/**' --fix --max-warnings 0 .",
      "npm run test:staged"
     ]
 }
